@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-sm-4">
+        <h2>AddMovie</h2>
+        <form (ngSubmit)="add()">
+            <div class="mb-3">
+                <label for="MovieName" class="form-label">Movie Name</label>
+                <input type="text" class="form-control" id="MovieName" [(ngModel)]="MovieName" name="MovieName">
+            </div>
+               <div class="mb-3">
+                <label for="DirectorsName" class="form-label">DirectorsName</label>
+                <input type="text" class="form-control" id="DirectorsName" [(ngModel)]="DirectorsName" name="DirectorsName">
+            </div>
+             <div class="mb-3">
+                <label for="YearReleased" class="form-label">YearReleased</label>
+                <input type="text" class="form-control" id="YearReleased" [(ngModel)]="YearReleased" name="YearReleased">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Movie</button>
+        </form>
+    </div>
+</div>

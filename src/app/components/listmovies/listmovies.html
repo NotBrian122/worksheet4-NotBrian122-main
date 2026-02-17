@@ -1,0 +1,12 @@
+@for (movie of movies.movies();track movie;){
+  <div class="container-fluid bg-secondary text-white pt-3 mt-1 mb-1">
+    <div class="row align-items">
+      <div class="col-sm-2">{{movie.MovieName}}</div>
+      <div class="col-sm-2">{{movie.DirectorName}}</div>
+      <div class="col-sm-2">{{movie.YearReleased}}</div>
+    </div>
+  </div>
+} @empty {
+  <p>No movies found!</p>
+}
+  
