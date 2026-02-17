@@ -10,15 +10,19 @@ import { Movieservice } from '../../services/movies';
 })
 export class Addmovie {
  protected MovieName: string = '';
+  protected MovieNumber: number = 0;
  protected DirectorsName: string = '';
  protected YearReleased: string = '';
+ protected Note: string = '';
 
  movies = inject(Movieservice);
 
  protected add(){
-  this.movies.addMovie(this.MovieName, this.DirectorsName, this.YearReleased);
+  this.movies.addMovie(this.MovieName,this.MovieNumber,this.DirectorsName, this.YearReleased,this.Note);
   this.MovieName = '';
+  this.MovieNumber = 0;
   this.DirectorsName = '';
   this.YearReleased = '';
+  this.Note = '';
  }
 }

@@ -20,4 +20,15 @@ describe('Listmovies', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('displays a movie note in the list', async () => {
+    const moviesService = TestBed.inject<any>("Movieservice" as any) as any;
+    // add a movie with a note
+    moviesService.addMovie('Title X', 42, 'Director', '2020', 'visible note');
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.textContent).toContain('visible note');
+  });
 });
